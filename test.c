@@ -36,7 +36,7 @@ sfun fun_table[MAXVALUE]={
 {EXIT,exitFun,"exitFun"}
 };
 
-//structure variable de
+
 
 int main()
 {
