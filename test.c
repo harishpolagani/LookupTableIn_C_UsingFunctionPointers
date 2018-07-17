@@ -52,12 +52,18 @@ int main()
     
     //here check choice value should not exceed the enum max value and should also match the Vtable id
     if( sptr->funNo < MAXVALUE   && sptr->funNo == fun_table[sptr->funNo].funNo)
-    sptr->cb=fun_table[sptr->funNo].cb;
-    //sptr->funName=fun_table[sptr->funNo].funName;
-    strncpy(sptr->funName,fun_table[sptr->funNo].funName,sizeof(fun_table[sptr->funNo].funName));
+    {
+        sptr->cb=fun_table[sptr->funNo].cb;
+        //sptr->funName=fun_table[sptr->funNo].funName;
+        strncpy(sptr->funName,fun_table[sptr->funNo].funName,sizeof(fun_table[sptr->funNo].funName));
     
-    //for example printf format: addition of 10 and 20 is = 30
-    printf(" %s of %d and %d is = %d \n",sptr->funName,val1,val2,sptr->cb(val1,val2));
+        //for example printf format: addition of 10 and 20 is = 30
+        printf(" %s of %d and %d is = %d \n",sptr->funName,val1,val2,sptr->cb(val1,val2));
+     }
+     else
+     {
+        printf("please enter correct input: \n ");
+     }
    }  
     
 
